@@ -107,7 +107,7 @@ html, body, .root {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #60ac5d;
+    background: blue;
     background-image: url('./icons/arrow-drop-down.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -149,6 +149,7 @@ html, body, .root {
     color: white;
   }
 
+  
   /* .open-search {
     position: fixed;
     right: 25px;

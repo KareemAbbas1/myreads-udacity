@@ -1,5 +1,5 @@
 
-// import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 // import Home from './Components/Home'
 // import SearchPage from './Components/SearchPage'
@@ -8,12 +8,16 @@ import './App.css'
 // import { useLocation } from 'react-router'
 // import Header from './Components/Header'
 import Home from './Components/Home'
+// import SearchPage from './Components/SearchPage'
+
 
 const App = () => {
   return (
-    <>
-     <Home />
-    </>
+    <Router>
+      <>
+        <Home />
+      </>
+    </Router>
   )
 }
 
