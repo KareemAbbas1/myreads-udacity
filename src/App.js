@@ -6,12 +6,13 @@ import './App.css'
 // import { Button } from 'react-bootstrap'
 // import Layout from './Components/Layout'
 // import { useLocation } from 'react-router'
-import Header from './Components/Header'
+// import Header from './Components/Header'
+import Home from './Components/Home'
 
 const App = () => {
   return (
     <>
-     <Header />
+     <Home />
     </>
   )
 }
