@@ -1,22 +1,25 @@
 
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css'
-// import Home from './Components/Home'
-// import SearchPage from './Components/SearchPage'
-// import { Button } from 'react-bootstrap'
-// import Layout from './Components/Layout'
-// import { useLocation } from 'react-router'
-// import Header from './Components/Header'
+import SearchPage from './Components/SearchPage'
 import Home from './Components/Home'
-// import SearchPage from './Components/SearchPage'
+import { Button } from 'react-bootstrap'
 
 
 const App = () => {
   return (
     <Router>
-      <>
+      <Route path='/' exact render={(props) => (
+
         <Home />
-      </>
+
+      )} />
+
+
+      <Route path='/searchpage' component={SearchPage} />
+      <div className="open-search">
+        <Link to='/searchpage'><Button>Add Books</Button></Link>
+      </div>
     </Router>
   )
 }
@@ -24,24 +27,28 @@ const App = () => {
 export default App
 
 
-  // <Layout>
-  //   <Router>
-  //     <div className='d-flex justify-content-between'>
+// <Layout>
+//   <Router>
+//     <div className='d-flex justify-content-between'>
 
-  //     <Route path='/' exact component={Home} />
+//     <Route path='/' exact component={Home} />
 
-  //     <Route path='/searchpage' component={SearchPage} />
-  //     <Link to='/searchpage'><Button className='m-2' variant='light'>Add Books</Button></Link>
+//     <Route path='/searchpage' component={SearchPage} />
+//     <Link to='/searchpage'><Button className='m-2' variant='light'>Add Books</Button></Link>
 
-  //     </div>
-  //   </Router>
-  // </Layout>
-
-
+//     </div>
+//   </Router>
+// </Layout>
 
 
 
 
+//   <Router>
+//   <>
+//     <Home />
+
+//   </>
+// </Router>
 
 
 
@@ -49,19 +56,38 @@ export default App
 
 
 
-  // render={(props) => (<Home />)
 
-  // <Button variant = 'primary' >
-  //       <div className="open-search">
-  //          <Link to='/searchpage'><Button variant='primary'>Add Books</Button></Link>
-  //       </div>
-  // </Button >
+// render={(props) => (<Home />)
 
-  // < Button variant = 'primary' >
-  //   <Router>
-  //    <Route path='/searchpage' component={SearchPage} />
-  //       <div className="open-search">
-  //          <Link to='/searchpage'><Button variant='primary'>Add Books</Button></Link>
-  //       </div>
-  //   </Router>
-  // </Button >
+// <Button variant = 'primary' >
+//       <div className="open-search">
+//          <Link to='/searchpage'><Button variant='primary'>Add Books</Button></Link>
+//       </div>
+// </Button >
+
+// < Button variant = 'primary' >
+//   <Router>
+//    <Route path='/searchpage' component={SearchPage} />
+//       <div className="open-search">
+//          <Link to='/searchpage'><Button variant='primary'>Add Books</Button></Link>
+//       </div>
+//   </Router>
+// </Button >
+
+
+/* <Router>
+        <Route path='/' exact render={(props) => (
+          <>
+            <Home />
+          </>
+        )} />
+
+
+        <Route path='/searchpage' component={SearchPage} />
+
+        <div className="open-search">
+          <Link to='/searchpage'><Button>Add a book</Button></Link>
+        </div>
+
+
+      </Router> */

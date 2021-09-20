@@ -4,7 +4,7 @@ const Shelf = (props) => {
     return (
 
         <div className="bookshelf">
-            <h2 className="bookshelf-title mt-4">{props.title}</h2>
+            <h4 className="bookshelf-title mt-4">{props.title}</h4>
             <div className="bookshelf-books">
             <ol className="books-grid">
                 <Book />

@@ -1,30 +1,39 @@
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import { Button } from 'react-bootstrap'
+// import { BrowserRouter as Router } from 'react-router-dom'
 import Layout from './Layout'
-import SearchPage from './SearchPage'
 // import { useLocation } from 'react-router-dom'
-
-
+import { Nav, Navbar, NavbarBrand, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
     return (
         <div>
-            <Router>
 
-                <div className='list-books-title'>
-                    <Layout>
-                        <div className='d-flex justify-content-between'>
-                            <h1>Books Tracker</h1>
-                            <Route path='/searchpage' exact component={SearchPage} />
-                            <Link to='/searchpage'><Button className='m-2' variant='light'>Add Books</Button></Link>
-                        </div>
-                    </Layout>
-                </div>
+            <Navbar className='list-books-title' bg='primary' variant='dark'>
+                <Layout>
 
-            </Router>
+                    <NavbarBrand><h1>Reads Tracker</h1></NavbarBrand>
+                    <Nav className='justify-content-end'>
+                        <Link to='/searchpage'>
+                            <Button className='m-2' variant='light'>
+                                Add Books
+                            </Button>
+                        </Link>
+                    </Nav>
+
+                </Layout>
+            </Navbar>
+
+
         </div>
     )
 }
 
 export default Header
+
+
+
+
+
+// <Route path='/searchpage' exact component={SearchPage} />
+// <Link to='/searchpage'><Button className='m-2' variant='light'>Add Books</Button></Link>
