@@ -1,19 +1,6 @@
 import Book from "./Book"
-import { useEffect } from "react";
-import { getAll } from "../BooksAPI";
-
 
 const Shelf = ({ title, books }) => {
-
-    // const book ={
-    //     id:"nggnmAEACAAJ",
-    //     title:"The Linux Command Line",
-    //     authors:['William E. Shotts, Jr.'],
-    //     img:"http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    //     shelf:"currentlyReading"
-    // };
-
-   
 
     return (
 

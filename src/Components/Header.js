@@ -1,6 +1,4 @@
-// import { BrowserRouter as Router } from 'react-router-dom'
 import Layout from './Layout'
-// import { useLocation } from 'react-router-dom'
 import { Nav, Navbar, NavbarBrand, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +6,6 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <div>
-
             <Navbar className='list-books-title' bg='primary' variant='dark'>
                 <Layout>
 
@@ -23,8 +20,6 @@ const Header = () => {
 
                 </Layout>
             </Navbar>
-
-
         </div>
     )
 }

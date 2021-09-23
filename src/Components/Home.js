@@ -1,27 +1,27 @@
 
-// import { BrowserRouter as Router, } from 'react-router-dom'
-// import Header from './Header'
-// import Layout from './Layout'
+import { Link } from 'react-router-dom'
 import Header from './Header'
-// import { Container } from 'react-bootstrap'
 import Layout from './Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Shelf from './Shelf'
-// import {  useState, useEffect } from 'react'
-// import { getAll } from '../BooksAPI'
-
+import { Button } from 'react-bootstrap'
 
 
 const Home = (books) => {
-    // const [books, setBooks] = useState([]);
 
     return (
         <div>
             <Header />
             <Layout>
+
                 <Shelf title='Currently Reading' />
-                {/* <Shelf title='Want to Read' />
-                <Shelf title='Read' /> */}
+                <Shelf title='Want to Read' />
+                <Shelf title='Read' />
+
+                <div className="open-search">
+                    <Link to='/searchpage'><Button>Add Books</Button></Link>
+                </div>
+
             </Layout>
         </div>
     )
