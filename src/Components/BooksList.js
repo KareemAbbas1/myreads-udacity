@@ -13,7 +13,7 @@ const BooksList = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            
+
             const books = await (BooksAPI.getAll())
             setBooks(books);
 
@@ -28,12 +28,32 @@ const BooksList = () => {
     const wantToRead = books.filter((book) => book.shelf === "wantToRead");
     const read = books.filter((book) => book.shelf === "read");
 
+    /* Updating Shelves Locally */
+
+    const updateShelf = (book, newShelf) => {
+
+        const updatedShelf = books.map(b => {
+    
+          if (b.id === book.id) {
+            book.shelf = newShelf;
+            return book;
+          }
+    
+          return b;
+        })
+
+     setBooks(updatedShelf);
+
+    }
+    
+    
     return (
         <div>
 
-            <Shelf title='Currently Reading' books={currentlyReading} />
-            <Shelf title='Want to Read' books={wantToRead} />
-            <Shelf title='Read' books={read} />
+            <Shelf title='Currently Reading' books={currentlyReading} updateShelf={updateShelf}/>
+            <Shelf title='Want to Read' books={wantToRead} updateShelf={updateShelf}/>
+            <Shelf title='Read' books={read} updateShelf={updateShelf}/>
+
         </div>
 
     )

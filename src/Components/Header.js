@@ -25,10 +25,3 @@ const Header = () => {
 }
 
 export default Header
-
-
-
-
-
-// <Route path='/searchpage' exact component={SearchPage} />
-// <Link to='/searchpage'><Button className='m-2' variant='light'>Add Books</Button></Link>
