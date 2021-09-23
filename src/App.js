@@ -4,14 +4,35 @@ import './App.css'
 import SearchPage from './Components/SearchPage'
 import Home from './Components/Home'
 import { Button } from 'react-bootstrap'
-
+import { useEffect } from 'react'
+import { getAll } from './BooksAPI'
 
 const App = () => {
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+        const books = await(getAll()) 
+
+        const currentlyReading = books.filter(book => book.shelf === 'currentlyReading')
+        const wantToRead = books.filter(book => book.shelf === 'wantToRead')
+        const read = books.filter(book => book.shelf === 'read')
+
+        // setBooks(currentlyReading, wantToRead, read)
+        console.log(currentlyReading, wantToRead, read);
+
+
+    };
+
+
+    fetchBooks();
+}, []);
+
+
   return (
     <Router>
       <Route path='/' exact render={(props) => (
 
-        <Home />
+        <Home />  //books={this.books}
 
       )} />
 
