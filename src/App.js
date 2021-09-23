@@ -8,11 +8,12 @@ const App = () => {
 
   return (
     <Router>
+      <div className='app'>
 
-      <Route path='/' exact component={Home} />
+        <Route path='/' exact component={Home} />
 
-      <Route path='/searchpage' component={SearchPage} />
-
+        <Route path='/searchpage' component={SearchPage} />
+      </div>
     </Router>
   )
 }

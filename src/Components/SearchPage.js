@@ -14,6 +14,7 @@ const SearchPage = () => {
   const [newBook, setNewBook] = useState([]);
   const [addNewBook, setAddNewBook] = useState(new Map());
 
+  /*  */
   useEffect(() => {
 
     BooksAPI.getAll()
