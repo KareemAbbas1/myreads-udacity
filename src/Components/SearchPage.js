@@ -24,6 +24,7 @@ const SearchPage = () => {
         setAddNewBook(addBookShelf(result))
       });
 
+
   }, []);
 
 
@@ -52,11 +53,9 @@ const SearchPage = () => {
       searchResult = false;
       setSearch([])
     }
+  }, [query]) 
 
-
-  }, [query])
-
-
+   
   useEffect(() => {
 
     const addBook = search.map(book => {
@@ -69,7 +68,7 @@ const SearchPage = () => {
       }
 
     })
-
+    
     setNewBook(addBook)
 
   }, [search, addNewBook])
@@ -99,8 +98,11 @@ const SearchPage = () => {
       book.shelf = newShelf
       updatedShelf.push(book)
     }
-    setBooks(updatedShelf);
-    BooksAPI.update(book, newShelf);
+
+    BooksAPI.update(book, newShelf)
+      .then(() => {
+        setBooks(updatedShelf)
+      })
   }
 
 

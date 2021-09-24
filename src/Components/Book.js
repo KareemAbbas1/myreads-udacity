@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-const Book = ({ book, updateShelf }) => {
+const Book = ({ book, updateShelf }) => { 
 
     return (
         <div>
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
+                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : "No Backgroung Image" })`  }}></div>
                     <div className="book-shelf-changer" bg='primary'>
                         <select defaultValue={book.shelf ? book.shelf : "none"} onChange={(e) => updateShelf(book, e.target.value)}>
                             <option value="move" disabled>Move to...</option>

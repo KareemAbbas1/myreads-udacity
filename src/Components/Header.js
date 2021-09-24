@@ -11,7 +11,7 @@ const Header = () => {
 
                     <NavbarBrand><h1>Reads Tracker</h1></NavbarBrand>
                     <Nav className='justify-content-end'>
-                        <Link to='/searchpage'>
+                        <Link to='/search'>
                             <Button className='m-2' variant='light'>
                                 Add Books
                             </Button>

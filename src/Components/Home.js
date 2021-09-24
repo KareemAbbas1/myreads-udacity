@@ -15,7 +15,7 @@ const Home = () => {
                 <BooksList />
 
                 <div className="open-search">
-                    <Link to='/searchpage'><Button>Add Books</Button></Link>
+                    <Link to='/search'><Button>Add Books</Button></Link>
                 </div>
 
             </Layout>
