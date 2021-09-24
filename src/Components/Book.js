@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Book = ({ book, updateShelf }) => { 
 
+
     return (
         <div>
             <div className="book">
@@ -19,7 +20,7 @@ const Book = ({ book, updateShelf }) => {
                     </div>
                 </div>
                 <div className="book-title">{book.title}</div>
-                <div className="book-authors">{book.authors}</div>
+                <div className="book-authors">{book.authors ? book.authors.join(', ') : "No authors"}</div>
             </div>
         </div>
     )
