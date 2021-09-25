@@ -1,21 +1,23 @@
 
-// import { BrowserRouter as Router, } from 'react-router-dom'
-// import Header from './Header'
-// import Layout from './Layout'
+import { Link } from 'react-router-dom'
 import Header from './Header'
-// import { Container } from 'react-bootstrap'
 import Layout from './Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Shelf from './Shelf'
+import BooksList from './BooksList'
+import { Button } from 'react-bootstrap'
 
 const Home = () => {
+
     return (
         <div>
             <Header />
             <Layout>
-                <Shelf title='Currently Reading'/>
-                <Shelf title='Want to Read'/>
-                <Shelf title='Read'/>
+                <BooksList />
+
+                <div className="open-search">
+                    <Link to='/search'><Button>Add Books</Button></Link>
+                </div>
+
             </Layout>
         </div>
     )
