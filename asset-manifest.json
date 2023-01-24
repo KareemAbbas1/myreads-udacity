@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/myreads-udacity/static/css/main.d4519c77.css",
-    "main.js": "/myreads-udacity/static/js/main.1678cedb.js",
+    "main.js": "/myreads-udacity/static/js/main.4d5e769a.js",
     "index.html": "/myreads-udacity/index.html",
     "static/media/arrow-back.svg": "/myreads-udacity/static/media/arrow-back.392bc09c6a87f6314e8d.svg",
     "static/media/arrow-drop-down.svg": "/myreads-udacity/static/media/arrow-drop-down.98ef3b31dd9e657746a1.svg",
     "main.d4519c77.css.map": "/myreads-udacity/static/css/main.d4519c77.css.map",
-    "main.1678cedb.js.map": "/myreads-udacity/static/js/main.1678cedb.js.map"
+    "main.4d5e769a.js.map": "/myreads-udacity/static/js/main.4d5e769a.js.map"
   },
   "entrypoints": [
     "static/css/main.d4519c77.css",
-    "static/js/main.1678cedb.js"
+    "static/js/main.4d5e769a.js"
   ]
 }
