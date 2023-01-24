@@ -1,8 +1,8 @@
 {
-  "homepage": "https://kareemabbas1.github.io/",
+  "homepage": "http://kareemabbas1.github.io/myreads-udacity",
   "name": "myreads-udacity",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -44,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^5.0.0"
   }
 }
