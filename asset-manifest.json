@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.25650828.css",
-    "main.js": "/static/js/main.1678cedb.js",
-    "index.html": "/index.html",
-    "static/media/arrow-back.svg": "/static/media/arrow-back.392bc09c6a87f6314e8d.svg",
-    "static/media/arrow-drop-down.svg": "/static/media/arrow-drop-down.98ef3b31dd9e657746a1.svg",
-    "main.25650828.css.map": "/static/css/main.25650828.css.map",
-    "main.1678cedb.js.map": "/static/js/main.1678cedb.js.map"
+    "main.css": "/myreads-udacity/static/css/main.d4519c77.css",
+    "main.js": "/myreads-udacity/static/js/main.1678cedb.js",
+    "index.html": "/myreads-udacity/index.html",
+    "static/media/arrow-back.svg": "/myreads-udacity/static/media/arrow-back.392bc09c6a87f6314e8d.svg",
+    "static/media/arrow-drop-down.svg": "/myreads-udacity/static/media/arrow-drop-down.98ef3b31dd9e657746a1.svg",
+    "main.d4519c77.css.map": "/myreads-udacity/static/css/main.d4519c77.css.map",
+    "main.1678cedb.js.map": "/myreads-udacity/static/js/main.1678cedb.js.map"
   },
   "entrypoints": [
-    "static/css/main.25650828.css",
+    "static/css/main.d4519c77.css",
     "static/js/main.1678cedb.js"
   ]
 }
