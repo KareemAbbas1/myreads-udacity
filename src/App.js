@@ -1,8 +1,8 @@
 
-import { HashRouter as Router, Route } from 'react-router-dom'
-import './App.css'
-import SearchPage from './Components/SearchPage'
-import Home from './Components/Home'
+import { HashRouter as Router, Route } from 'react-router-dom';
+import './App.css';
+import SearchPage from './Components/SearchPage';
+import Home from './Components/Home';
 
 const App = () => {
 

@@ -53,9 +53,9 @@ const SearchPage = () => {
       searchResult = false;
       setSearch([])
     }
-  }, [query]) 
+  }, [query])
 
-   
+
   useEffect(() => {
 
     const addBook = search.map(book => {
@@ -68,7 +68,7 @@ const SearchPage = () => {
       }
 
     })
-    
+
     setNewBook(addBook)
 
   }, [search, addNewBook])
@@ -125,13 +125,24 @@ const SearchPage = () => {
         </div>
 
         <div className="search-books-results">
-          <ol className="books-grid">
-            {newBook.map(b => (
-              <li key={b.id} >
-                <Book book={b} updateShelf={updateShelf} />
-              </li>
-            ))}
-          </ol>
+          {
+            newBook.length > 0
+              ?
+              <ol className="books-grid">
+                {newBook.map(b => (
+                  <li key={b.id} >
+                    <Book book={b} updateShelf={updateShelf} />
+                  </li>
+                ))}
+              </ol>
+              :
+              <div>
+                <h4>Search Terms:</h4>
+                <p>
+                  Android, Art, Artificial Intelligence, Astronomy, Austen, Baseball, Basketball, Bhagat, Biography, Brief, Business, Camus, Cervantes, Christie, Classics, Comics, Cook, Cricket, Cycling, Desai, Design, Development, Digital Marketing, Drama, Drawing, Dumas, Education, Everything, Fantasy, Film, Finance, First, Fitness, Football, Future, Games, Gandhi, History, History, Homer, Horror, Hugo, Ibsen, Journey, Kafka, King, Lahiri, Larsson, Learn, Literary Fiction, Make, Manage, Marquez, Money, Mystery, Negotiate, Painting, Philosophy, Photography, Poetry, Production, Program Javascript, Programming, React, Redux, River, Robotics, Rowling, Satire, Science Fiction, Shakespeare, Singh, Swimming, Tale, Thrun, Time, Tolstoy, Travel, Ultimate, Virtual Reality, Web Development, iOS
+                </p>
+              </div>
+          }
         </div>
       </div>
     </Layout>
